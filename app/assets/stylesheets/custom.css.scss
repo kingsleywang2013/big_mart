@@ -1,0 +1,32 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.heading {
+  margin-bottom: 30px;
+}
+.product-image {
+  text-align: center;
+}
+
+.product {
+  h4 {
+    margin: 0;
+  }
+  .price {
+    margin: 0;
+    padding-top: 15px;
+  }
+  .description {
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.btn-primary:visited {
+  color: white !important;
+}
+
+.btn-danger:visited {
+  color: white !important;
+}

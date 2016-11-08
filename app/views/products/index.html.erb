@@ -1,0 +1,27 @@
+<h1 class="text-center heading">Products</h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <% @products.each do |product| %>
+      <div class="well">
+        <div class="row">
+          <div class="col-md-3 product-image">
+            <%= image_tag product.image_url, height:180, width: 120 %>
+          </div>
+          <div class="col-md-9 product">
+            <h4><%= product.title %></h4>
+            <p class="price"><span class="label label-danger">$ <%= product.price %></span></p>
+            <p class="description"><%= truncate(strip_tags(product.description),length: 200)%></p>
+            <div class="col-sx-12">
+              <%= link_to 'Show', product, class:'btn btn-default btn' %>
+              <%= link_to 'Edit', edit_product_path(product), class:'btn btn-primary btn' %>
+              <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure to delete?' }, class:'btn btn-danger btn' %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'New Product', new_product_path %>
