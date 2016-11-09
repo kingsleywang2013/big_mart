@@ -30,3 +30,22 @@
 .btn-danger:visited {
   color: white !important;
 }
+
+.store-image {
+  text-align: center;
+}
+
+.user-store {
+  margin-top: 55px;
+  h4 {
+    color: #227;
+  }
+  p {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .price {
+    color: #44a;
+    font-weight: bold;
+  }
+}

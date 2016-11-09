@@ -1,0 +1,21 @@
+<h1 class="text-center">Your Pragmatic Catelog</h1>
+<% cache @products do %>
+  <% @products.each do |product| %>
+    <% cache product do %>
+      <div class="well user-store">
+        <div class="row">
+          <div class="col-md-3 store-image">
+            <%= image_tag product.image_url, height:180, width: 120 %>
+          </div>
+          <div class="col-md-9">
+            <h4><%= product.title %></h4>
+            <p><%= sanitize(product.description) %></p>
+            <div class="price_line">
+              <span class="price"><%= number_to_currency product.price %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

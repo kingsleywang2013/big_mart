@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BigMart</title>
+    <title>BigMart Books Online Store</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,10 @@
   </head>
 
   <body>
-    <p id="notice"><%= notice %></p>
-    <%= yield %>
+  <%= render 'layouts/navigation' %>
+    <div class="container">
+      <%= render 'layouts/flashmessage' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

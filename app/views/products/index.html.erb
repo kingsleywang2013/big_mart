@@ -9,7 +9,7 @@
           </div>
           <div class="col-md-9 product">
             <h4><%= product.title %></h4>
-            <p class="price"><span class="label label-danger">$ <%= product.price %></span></p>
+            <p class="price"><span class="label label-danger"><%= number_to_currency product.price %></span></p>
             <p class="description"><%= truncate(strip_tags(product.description),length: 200)%></p>
             <div class="col-sx-12">
               <%= link_to 'Show', product, class:'btn btn-default btn' %>
